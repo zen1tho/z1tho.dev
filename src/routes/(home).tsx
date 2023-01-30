@@ -18,10 +18,10 @@ export default function Home() {
     <main class={styles.Home}>
       <div class={styles.Profile}>
         <div class={styles.Avatar} />
-        <span>zen1tho</span>
+        <span>Zen1tho</span>
       </div>
       <div class={styles.Bio}>
-        <p>Welcome to my home.</p>
+        <p>Welcome to my website.</p>
         <p>
           I'm primarily a web developer, but I have experience in many areas of
           programming

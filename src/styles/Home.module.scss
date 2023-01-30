@@ -9,8 +9,8 @@
   //   border-width: 3px;
   //   border-color: #2c2c2c;
   //   border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0.005);
-  outline: solid #d8dee91a 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: solid #ffffff99 2px;
   border-radius: 2px;
   padding: 1rem;
   .Profile {
@@ -26,10 +26,10 @@
     .Avatar {
       height: 50%;
       aspect-ratio: 1/1;
-      background-image: url("../assets/zen1tho.png");
+      background-image: url("../assets/zen1tho.jpg");
       border-radius: 50%;
       outline: solid 3px #fff;
-      background-size: 125%;
+      background-size: 120%;
       background-position: center center;
       background-repeat: no-repeat;
     }
