@@ -7,6 +7,7 @@ import {
   FileRoutes,
   Head,
   Html,
+  Link,
   Meta,
   Routes,
   Scripts,
@@ -21,6 +22,16 @@ export default function Root() {
         <Title>SolidStart - Bare</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Link rel="preconnect" href="https://fonts.googleapis.com" />
+        <Link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <Link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans&family=JetBrains+Mono:wght@200;300;400;700&family=Noto+Sans+JP:wght@700&family=Open+Sans:wght@300&family=Poppins:wght@600;700;800&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Body>
         <Suspense>
