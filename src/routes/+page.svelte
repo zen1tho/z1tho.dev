@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import anime from 'animejs';
+	import BrandLogos from '../components/BrandLogos.svelte';
 
 	onMount(() => {
 		anime({
 			targets: 'main',
 			translateY: ['-10%', '0%'],
 			opacity: [0, 1],
-			duration: 2500,
+			duration: 3000,
 			easing: 'easeOutExpo'
 		});
 	});
@@ -16,11 +17,13 @@
 <main class="Home">
 	<div class="Profile">
 		<div class="Avatar" />
-		<span>Zen1tho</span>
+		<span>zen1tho</span>
 	</div>
 	<div class="Bio">
 		<p>Welcome to my website.</p>
 		<p>I'm primarily a web developer, but I have experience in many areas of programming</p>
+
+		<BrandLogos />
 	</div>
 </main>
 
@@ -45,9 +48,9 @@
 			font-size: 2.5rem;
 			font-family: 'Open Sans', sans-serif;
 			flex-direction: column;
-			gap: 1rem;
+			gap: 2vh;
 			.Avatar {
-				height: 50%;
+				height: 60%;
 				aspect-ratio: 1/1;
 				background-image: url('../assets/zen1tho.jpg');
 				border-radius: 50%;
