@@ -1,0 +1,33 @@
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  font-size: 1.2rem;
+  font-family: "JetBrains Mono", sans-serif;
+  width: 8rem;
+  z-index: 3;
+  .Input {
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+  }
+  ul {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #2c2c2c;
+    cursor: default;
+  }
+}

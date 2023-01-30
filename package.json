@@ -18,6 +18,8 @@
   "dependencies": {
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.7.0",
+    "@types/animejs": "^3.1.7",
+    "animejs": "^3.2.1",
     "sass": "^1.57.1",
     "solid-js": "^1.6.9",
     "solid-start": "^0.2.15",

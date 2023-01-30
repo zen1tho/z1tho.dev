@@ -13,6 +13,7 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import NavBar from "~/components/NavBar";
 import "./root.scss";
 
 export default function Root() {
@@ -36,6 +37,7 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
+            <NavBar />
             <Routes>
               <FileRoutes />
             </Routes>

@@ -1,5 +1,4 @@
 :root {
-  background-color: #080808;
   color: #eceff4;
   font-family: "DM Sans", sans-serif;
   font-size: calc(calc(1vh + 1vw) * 0.8);
@@ -17,4 +16,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: #080808;
+}
+
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
 }
