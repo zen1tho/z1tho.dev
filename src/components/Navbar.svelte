@@ -61,6 +61,14 @@
 </div>
 
 <style lang="scss">
+	@keyframes opac-list {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 	.NavBar {
 		display: flex;
 		flex-direction: column;
@@ -92,6 +100,7 @@
 			list-style-type: none;
 			color: #cfcfcf;
 			cursor: default;
+			animation: opac-list 1s ease-in-out;
 			li > a {
 				color: inherit;
 				text-decoration: none;
