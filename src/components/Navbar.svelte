@@ -39,7 +39,6 @@
 		});
 	}
 	$: $navInput = $page.url.pathname.slice(1);
-	$: console.log(mouseOverNav);
 </script>
 
 <nav class="NavBar" style="opacity: 0">
