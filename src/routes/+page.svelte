@@ -24,7 +24,7 @@
 	/>
 	<meta name="author" content="zen1tho" />
 </svelte:head>
-<main class="Home">
+<main class="Home" style="opacity: 0">
 	<div class="Profile">
 		<div class="Avatar" />
 		<span>zen1tho</span>

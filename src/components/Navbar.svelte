@@ -42,7 +42,7 @@
 	$: console.log(mouseOverNav);
 </script>
 
-<nav class="NavBar">
+<nav class="NavBar" style="opacity: 0">
 	<div style="display: flex; 'flex-direction': row; width: 100% ">
 		~/
 		<div>
