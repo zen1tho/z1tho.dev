@@ -16,6 +16,13 @@
 
 <svelte:head>
 	<title>zen1tho's website</title>
+
+	<meta name="description" content="zen1tho's website." />
+	<meta
+		name="keywords"
+		content="zen1tho, portfolio, blog, projects, about, programming, coding, linux"
+	/>
+	<meta name="author" content="zen1tho" />
 </svelte:head>
 <main class="Home">
 	<div class="Profile">

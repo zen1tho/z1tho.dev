@@ -5,6 +5,11 @@
 	import type { Writable } from 'svelte/store';
 </script>
 
+<svelte:head>
+	<meta name="description" content="zen1tho's error page" />
+	<meta name="keywords" content="zen1tho, error" />
+	<meta name="author" content="zen1tho" />
+</svelte:head>
 <main>
 	<header>
 		ERROR {$page.status}: {getReasonPhrase($page.status)}

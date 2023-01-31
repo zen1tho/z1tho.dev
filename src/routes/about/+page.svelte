@@ -1,3 +1,9 @@
+<svelte:head>
+	<title>zen1tho's about page</title>
+	<meta name="description" content="zen1tho's about page." />
+	<meta name="keywords" content="zen1tho, about, programming, rust, coding, linux" />
+	<meta name="author" content="zen1tho" />
+</svelte:head>
 <main>
 	<header>About Me</header>
 	<div class="Bio">
@@ -18,10 +24,6 @@
 		</div>
 	</div>
 </main>
-
-<svelte:head>
-	<title>zen1tho's blog</title>
-</svelte:head>
 
 <style scoped lang="scss">
 	main {
