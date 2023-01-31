@@ -14,6 +14,9 @@
 	});
 </script>
 
+<svelte:head>
+	<title>zen1tho's website</title>
+</svelte:head>
 <main class="Home">
 	<div class="Profile">
 		<div class="Avatar" />

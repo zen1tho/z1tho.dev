@@ -1,22 +1,36 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
+	import anime from 'animejs';
+	import { onMount, setContext } from 'svelte';
+	import { writable } from 'svelte/store';
 
 	const routes = ['about', 'blog', 'projects', 'portfolio'];
 	let activeRoutes = [] as string[];
-	let navInput: string = $page.url.pathname.slice(1);
+	let navInput = writable($page.url.pathname.slice(1));
+	setContext('navInput', navInput);
 	let navEl: any;
+	let path: string = $page.url.pathname;
+	let mouseOverNav = false;
 
 	onMount(() => {
 		// It doesn't work otherwise...
 		navEl.addEventListener('input', () => {
-			activeRoutes = filterRoutes(navInput);
+			activeRoutes = filterRoutes($navInput);
+		});
+		window.addEventListener('click', () => {
+			mouseOverNav || (() => (activeRoutes = []))();
+		});
+		anime({
+			targets: 'nav',
+			translateY: ['-20%', '0%'],
+			opacity: [0, 1],
+			duration: 1000,
+			easing: 'easeOutExpo'
 		});
 	});
 
 	function filterRoutes(input: string) {
-		console.log(input);
 		return routes.filter((route: string) => {
 			if (route === input) {
 				return false;
@@ -24,16 +38,18 @@
 			return route.startsWith(input);
 		});
 	}
+	$: $navInput = $page.url.pathname.slice(1);
+	$: console.log(mouseOverNav);
 </script>
 
-<div class="NavBar">
+<nav class="NavBar">
 	<div style="display: flex; 'flex-direction': row; width: 100% ">
 		~/
 		<div>
 			<input
 				class="Input"
 				bind:this={navEl}
-				bind:value={navInput}
+				bind:value={$navInput}
 				on:click={(e) => {
 					if (!e.currentTarget.value) {
 						activeRoutes = routes;
@@ -47,8 +63,15 @@
 						}
 					} else if (e.key === 'Enter') {
 						e.preventDefault();
+						activeRoutes = [];
 						goto(e.currentTarget.value || '/');
 					}
+				}}
+				on:mouseenter={() => {
+					mouseOverNav = true;
+				}}
+				on:mouseleave={() => {
+					mouseOverNav = false;
 				}}
 			/>
 			<ul>
@@ -58,7 +81,7 @@
 			</ul>
 		</div>
 	</div>
-</div>
+</nav>
 
 <style lang="scss">
 	@keyframes opac-list {
@@ -72,6 +95,8 @@
 	.NavBar {
 		display: flex;
 		flex-direction: column;
+		padding: 0;
+		margin: 0;
 		position: fixed;
 		top: 2%;
 		left: 2%;
@@ -100,11 +125,12 @@
 			list-style-type: none;
 			color: #cfcfcf;
 			cursor: default;
-			animation: opac-list 1s ease-in-out;
 			li > a {
 				color: inherit;
 				text-decoration: none;
 				transition: color 0.3s;
+
+				animation: opac-list 0.2s ease-in-out;
 			}
 			li > a:hover {
 				color: #ffffff;
