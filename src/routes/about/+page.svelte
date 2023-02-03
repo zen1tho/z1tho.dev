@@ -5,7 +5,7 @@
 	<meta name="author" content="zen1tho" />
 </svelte:head>
 <main>
-	<header>About Me</header>
+	<h1>About Me</h1>
 	<div class="Bio">
 		<div>
 			<p>
@@ -33,7 +33,7 @@
 		align-items: flex-start;
 		height: 60%;
 		width: 60%;
-		header {
+		h1 {
 			font-size: 4rem;
 			font-family: 'Poppins', sans-serif;
 			font-weight: 700;

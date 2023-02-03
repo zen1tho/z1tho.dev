@@ -11,9 +11,9 @@
 	<meta name="author" content="zen1tho" />
 </svelte:head>
 <main>
-	<header>
+	<h1>
 		ERROR {$page.status}: {getReasonPhrase($page.status)}
-	</header>
+	</h1>
 	<p>
 		Try refreshing your page or <a href="/">click here to go home</a>.
 	</p>
@@ -28,7 +28,7 @@
 		align-items: center;
 		flex-direction: column;
 
-		header {
+		h1 {
 			font-family: 'Poppins', sans-serif;
 			font-weight: 700;
 			font-size: 4rem;
